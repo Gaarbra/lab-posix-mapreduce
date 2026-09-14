@@ -432,6 +432,9 @@ and not the total length of time for all commands.
 > **Aside:**
 > If we were to rewrite the above pipeline in pure Python, it would be impossible to have the unzipping and json decoding happen in parallel due to the [Global Interpreter Lock (GIL)](https://wiki.python.org/moin/GlobalInterpreterLock).
 > This GIL is one of the performance warts of python that the [Benevolent Dictator for Life (BDFL)](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life) Guido van Rossum implemented in the early days of python to make programming easier.
+>
+> <img src=img/gil.jpg width=300px />
+>
 > Recently, there has been work on removing the GIL from python in order to make parallel programming possible.
 > [PEP703](https://peps.python.org/pep-0703/) was created in 2023 to address this concern, and the latest versions of python can be run without the GIL.
 > But these changes are still considered experimental and not production ready.
